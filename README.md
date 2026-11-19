@@ -102,3 +102,15 @@ add() twice, so each call increases the value by 2.
 After two calls, the value is 4.
 The statement b.items = b.items + 1 changes it to 5.
 Therefore, the second print statement prints 5.
+
+### Actual Output
+
+```
+1
+5
+```
+
+### Comparison
+
+My prediction was correct. The actual output matches my prediction:
+1 for the Bag object and 5 for the BigBag object.
