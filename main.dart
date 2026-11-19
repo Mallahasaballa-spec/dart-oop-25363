@@ -1,3 +1,4 @@
+// Part 1: BusCard
 class BusCard {
   String _owner = '';
   int _balance = 0;
@@ -25,11 +26,13 @@ class BusCard {
     } else {
       _owner = newName;
     }
+    return;
   }
 
   // Show card information
   void showInfo() {
     print('Owner: $_owner | Balance: $_balance RWF');
+    return;
   }
 
   // TODO 2: Top up the card
@@ -55,8 +58,40 @@ class BusCard {
   }
 }
 
-// Demonstration for Part 1
+// Part 2: StudentCard
+class StudentCard extends BusCard {
+  int _discount = 0;
+
+  // Constructor
+  StudentCard(String owner, int balance, int discount)
+      : super(owner, balance) {
+    _discount = discount;
+  }
+
+  // Show card information and discount
+  @override
+  void showInfo() {
+    super.showInfo();
+    print('Student card: $_discount% off');
+    return;
+  }
+
+  // TODO 4: Pay with the student discount
+  @override
+  void pay(int fare) {
+    int off = fare * _discount ~/ 100;
+    print('Student discount: $off RWF');
+    super.pay(fare - off);
+    return;
+  }
+}
+
+// Demonstration for Parts 1 and 2
 void main() {
+  // by MHAH
+
+  print('=== Part 1: BusCard ===');
+
   BusCard card = BusCard('Moalla', 1630);
 
   card.showInfo();
@@ -74,5 +109,15 @@ void main() {
   card.pay(5000);
 
   card.showInfo();
+
+  print('');
+  print('=== Part 2: StudentCard ===');
+
+  StudentCard studentCard = StudentCard('Moalla', 1630, 13);
+
+  studentCard.showInfo();
+  studentCard.pay(263);
+  studentCard.showInfo();
+
   return;
 }
