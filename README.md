@@ -81,3 +81,24 @@ Line numbers refer to the original buggy code.
 ```
 100
 ```
+
+## Part 5: Predict the Output
+
+### Prediction
+
+```
+1
+5
+```
+
+### Explanation
+
+For a, the initial value is 0. Calling add() increases it to 1.
+The setter rejects -5 because it accepts only non-negative values.
+Therefore, the first print statement prints 1.
+
+For b, the initial value is 0. BigBag.add() calls the parent's
+add() twice, so each call increases the value by 2.
+After two calls, the value is 4.
+The statement b.items = b.items + 1 changes it to 5.
+Therefore, the second print statement prints 5.
