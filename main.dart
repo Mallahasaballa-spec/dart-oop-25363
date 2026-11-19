@@ -86,36 +86,35 @@ class StudentCard extends BusCard {
   }
 }
 
-// Demonstration for Parts 1 and 2
+// Part 3: Use the classes in main()
 void main() {
   // by MHAH
+  // My numbers: D = 63, L = 3
+  // Starting balance = 1630 RWF, Bus fare = 263 RWF, Discount = 13%
 
-  print('=== Part 1: BusCard ===');
-
+  // Create a card and test the setter
   BusCard card = BusCard('Moalla', 1630);
 
+  card.owner = 'Al';
   card.showInfo();
 
-  print('Owner: ${card.owner}');
-  print('Balance: ${card.balance} RWF');
+  // TODO 5: Change the owner to your full name
+  card.owner = 'Moalla Hasaballa Ahmed Haggar';
+  card.showInfo();
 
-  card.owner = 'Moalla Haggar';
-  card.owner = 'Mo';
+  // TODO 6: Refuse 100 RWF, then accept 2000 RWF
+  card.topUp(100);
+  card.topUp(2000);
 
-  card.topUp(1000);
-  card.topUp(200);
-
+  // TODO 7: Pay the bus fare twice
   card.pay(263);
-  card.pay(5000);
-
+  card.pay(263);
   card.showInfo();
 
-  print('');
-  print('=== Part 2: StudentCard ===');
-
+  // TODO 8: Create a student card
   StudentCard studentCard = StudentCard('Moalla', 1630, 13);
 
-  studentCard.showInfo();
+  // TODO 9: Pay with the student card and show its information
   studentCard.pay(263);
   studentCard.showInfo();
 

@@ -45,3 +45,20 @@ Remaining balance = 1630 - 229 = 1401 RWF
 ## Run the Program
 
 dart run main.dart
+
+## Part 3: Full Program Output
+
+```
+Error: name too short
+Owner: Moalla | Balance: 1630 RWF
+Owner: Moalla Hasaballa Ahmed Haggar | Balance: 1630 RWF
+Error: top-up must be 500 to 50000 RWF
+Topped up 2000 RWF
+Paid 263 RWF
+Paid 263 RWF
+Owner: Moalla Hasaballa Ahmed Haggar | Balance: 3104 RWF
+Student discount: 34 RWF
+Paid 229 RWF
+Owner: Moalla | Balance: 1401 RWF
+Student card: 13% off
+```
